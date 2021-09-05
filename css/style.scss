@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+//Colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desatured-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    p {
+        font-size: 16px;
+    }
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: fixed;
+    .header {
+        img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    }
+
+    .content {
+        padding: 20px;
+        .text {
+            text-align: center;
+            h1 {
+                color: $dark-blue;
+                font-weight: 700;
+            }
+            p {
+                padding: 20px;
+                color: $desatured-blue;
+                line-height: 22px;
+            }
+        }
+        .small-card {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $very-pale-blue;
+            border-radius: 10px;
+            padding: 15px 10px;
+            margin: 20px 0;
+            .plan {
+                flex-direction: column;
+                padding-right: 25px;
+                p:first-of-type {
+                    font-weight: 700;
+                }   
+            }
+            a {
+                font-weight: 700;
+            }
+        }
+        .btns {
+            flex-direction: column;
+            button {
+                padding: 15px 30px;
+                border-radius: 10px;
+                border: none;
+                width: 100%;
+                cursor: pointer;
+                font-family: 'Red Hat Display', sans-serif;
+                font-size: 16px;
+                &:first-of-type {
+                    background-color: $bright-blue;
+                    color: #ffffff;
+                    margin: 20px 0;
+                }
+                &:last-of-type {
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+//Desktop only
+@media only screen and (min-width: 376px) {
+    body {
+        background: url(/images/pattern-background-desktop.svg) no-repeat;
+        background-color: $pale-blue;
+    }
+
+    .card {
+        width: 450px;
+        left: calc(50% - 225px);
+        top: calc(50% - 358px);
+        .content {
+            padding: 40px;
+            .text {
+                text-align: center;
+                p {
+                    padding: 20px;
+                }
+            }
+            .small-card {
+                a:hover {
+                    text-decoration: none;
+                    opacity: .7;
+                    transition: .5s;
+                }
+            }
+            .btns {
+                flex-direction: column;
+                button {
+                    &:first-of-type:hover {
+                        opacity: .7;     
+                        box-shadow: 0px 10px 20px hsl(245, 75%, 80%) ;
+                        transition: .5s;
+                        color: #ffffff;
+                    }
+                    &:last-of-type:hover {
+                        font-weight: 700;
+                        transition: .7s;
+                    }
+                }
+            }
+        }
+}
+}
+        
+
+
+//Mobile only
+@media only screen and (max-width: 375px) {
+    body {
+        background: url(/images/pattern-background-mobile.svg) no-repeat;
+        background-color: $pale-blue;
+    }
+    .card {
+        width: 300px;
+        left: calc(50% - 150px);
+        top: calc(50% - 302.5px);
+        .header {
+            img {
+                width: 300px;
+            }
+        }
+    .content {
+        .small-card {
+            margin: 10px 0;
+        }
+        .btns {
+            flex-direction: column;
+            button {
+                &:last-of-type {
+                    color: $desatured-blue;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    }
+}

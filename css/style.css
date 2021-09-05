@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body p {
+  font-size: 16px;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.card .header img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card .content {
+  padding: 20px;
+}
+
+.card .content .text {
+  text-align: center;
+}
+
+.card .content .text h1 {
+  color: #1f2f56;
+  font-weight: 700;
+}
+
+.card .content .text p {
+  padding: 20px;
+  color: #7280a7;
+  line-height: 22px;
+}
+
+.card .content .small-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin: 20px 0;
+}
+
+.card .content .small-card .plan {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 25px;
+}
+
+.card .content .small-card .plan p:first-of-type {
+  font-weight: 700;
+}
+
+.card .content .small-card a {
+  font-weight: 700;
+}
+
+.card .content .btns {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .content .btns button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+}
+
+.card .content .btns button:first-of-type {
+  background-color: #3829e0;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.card .content .btns button:last-of-type {
+  background: none;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background: url(/images/pattern-background-desktop.svg) no-repeat;
+    background-color: #e0e8ff;
+  }
+  .card {
+    width: 450px;
+    left: calc(50% - 225px);
+    top: calc(50% - 358px);
+  }
+  .card .content {
+    padding: 40px;
+  }
+  .card .content .text {
+    text-align: center;
+  }
+  .card .content .text p {
+    padding: 20px;
+  }
+  .card .content .small-card a:hover {
+    text-decoration: none;
+    opacity: .7;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .card .content .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card .content .btns button:first-of-type:hover {
+    opacity: .7;
+    -webkit-box-shadow: 0px 10px 20px #aca6f2;
+            box-shadow: 0px 10px 20px #aca6f2;
+    -webkit-transition: .5s;
+    transition: .5s;
+    color: #ffffff;
+  }
+  .card .content .btns button:last-of-type:hover {
+    font-weight: 700;
+    -webkit-transition: .7s;
+    transition: .7s;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background: url(/images/pattern-background-mobile.svg) no-repeat;
+    background-color: #e0e8ff;
+  }
+  .card {
+    width: 300px;
+    left: calc(50% - 150px);
+    top: calc(50% - 302.5px);
+  }
+  .card .header img {
+    width: 300px;
+  }
+  .card .content .small-card {
+    margin: 10px 0;
+  }
+  .card .content .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card .content .btns button:last-of-type {
+    color: #7280a7;
+    font-weight: 700;
+  }
+}
+/*# sourceMappingURL=style.css.map */
